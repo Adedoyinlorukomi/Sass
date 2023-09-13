@@ -1,0 +1,29 @@
+@import "another";
+@import 'button';
+
+/* @mixin and @include
+defining a mixin */
+
+@mixin name{
+    property: value;
+    // ....
+}
+
+@mixin important{
+    transform: skewX(20deg);
+}
+@mixin special-border{
+    border: black 2px solid;
+    padding: 20px 100px;
+    margin: 20px auto;
+}
+
+//A mixin can also include other mixins:
+
+@mixin special-text {
+    @include important;
+    @include special-border;
+}
+#special{
+    @include special-text;
+}

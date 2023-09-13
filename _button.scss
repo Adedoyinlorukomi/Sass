@@ -1,0 +1,21 @@
+//Sass @extend and Inheritance
+//The @extend directive lets you share a set of CSS properties from one selector to another.
+
+.button-basic  {
+    border: none;
+    padding: 15px 60px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .no{
+    @extend .button-basic;
+    background-color: rgb(160, 34, 34);
+  }
+  
+  .yes{
+    @extend .button-basic;
+    background-color: rgb(99, 122, 99);
+    color: white;
+  }

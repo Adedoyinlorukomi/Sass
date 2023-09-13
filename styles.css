@@ -1,0 +1,65 @@
+/*scss variable syntax*/
+/*$variablename: value;*/
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: green;
+}
+
+p {
+  background-color: green;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+#practice {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: lowercase;
+  text-overflow: hidden;
+}
+
+#practice::first-letter {
+  text-transform: capitalize;
+}
+
+.button-basic, .yes, .no {
+  border: none;
+  padding: 15px 60px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.no {
+  background-color: rgb(160, 34, 34);
+}
+
+.yes {
+  background-color: rgb(99, 122, 99);
+  color: white;
+}
+
+/* @mixin and @include
+defining a mixin */
+#special {
+  transform: skewX(20deg);
+  border: black 2px solid;
+  padding: 20px 100px;
+  margin: 20px auto;
+}
+
+/*# sourceMappingURL=styles.css.map */

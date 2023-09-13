@@ -1,0 +1,58 @@
+/*scss variable syntax*/
+/*$variablename: value;*/
+
+$myFont: Helvetica, sans-serif;
+$mybgColor:white;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  //you can create another variable for each selector
+  $mybgColor: green  !global;
+  background-color: $mybgColor;
+}
+p{
+    //this will not take the bgc for body, because green is only for body
+    background-color: $mybgColor;
+}  
+//now to make green general, we can add the !global to the the body
+
+//SASS nested rules and properties
+
+//SASS nested rules
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+}
+
+//SASS nested properties
+#practice{
+    font: {
+        family: Helvetica, sans-serif;
+        size: 18px;
+        weight: bold;
+      }
+      
+      text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+      }
+}
+#practice::first-letter{
+    text-transform: capitalize;
+}
+
+
